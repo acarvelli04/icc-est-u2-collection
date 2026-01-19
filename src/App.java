@@ -54,11 +54,33 @@ public class App {
 
         runMaquina();
         */
-       runMaps();
+       //runMaps();
+       runEjercicios();
+       runEjercicios2();
         
     }
 
-    
+    private static void runEjercicios(){ 
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+            22, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            10, 18, 19, 20, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+        Map<Integer, Integer> resultadoEj1 = ejercicios.contarDuplicados(list);
+        System.out.println(resultadoEj1);
+        System.out.println("----------------------");
+        
+
+    }
+
+    private static void runEjercicios2(){ 
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(4,5,1,2,5,4,3,2,1,6,7,3,8,9,6,7,10);
+        int resultadoEj2 = ejercicios.noHayDuplicados(list);
+        System.out.println(resultadoEj2);
+        System.out.println("----------------------");
+        
+
+    }
 
     private static void runMaquina(){
         List<Maquina> maquinas = crearMaquinas();
@@ -147,10 +169,5 @@ public class App {
         System.out.println(personObj);
 
 
-    }
-
-    private static void runEjercicios(){
-        EjerciciosMapas ejercicios = new EjerciciosMapas();
-        ejercicios.contarDuplicados(null);
     }
 }
