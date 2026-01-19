@@ -1,15 +1,19 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import Controlleres.MaquinasController;
 import Structures.Sets.Sets;
+import maps.EjerciciosMapas;
+import maps.Maps;
 import models.Maquina;
 import models.Node;
 import models.Person;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        /* 
         Sets setsClases = new Sets();
         Set<String> hasSet = setsClases.cosntruirHashSet();
         System.out.println(hasSet);
@@ -49,7 +53,12 @@ public class App {
         System.out.println("Carlos".compareTo("Ana"));
 
         runMaquina();
+        */
+       runMaps();
+        
     }
+
+    
 
     private static void runMaquina(){
         List<Maquina> maquinas = crearMaquinas();
@@ -117,5 +126,31 @@ public class App {
                 new Maquina("DB13", "71.248.50.86", Arrays.asList(17, 11, 12)));
         return maquinas;
 
+    }
+
+    private static void runMaps(){
+        Maps maps = new Maps();
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        System.err.println(hashMap);
+
+        Map<String, Integer> treeMap = maps.connstruirTreeMap();
+        System.out.println(treeMap);
+
+        Map<Person, Integer> treePersMap = maps.construirTreeM();
+        System.out.println(treePersMap);
+        maps.printFilter(treePersMap);
+
+        Map<Integer, Person> treeMapInvertido = maps.construirTreeMapPersonasInverso();
+        System.out.println(treeMapInvertido);
+        
+        Map<Integer, Person> personObj = maps.construirTreeMapPersonasObj();
+        System.out.println(personObj);
+
+
+    }
+
+    private static void runEjercicios(){
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        ejercicios.contarDuplicados(null);
     }
 }
