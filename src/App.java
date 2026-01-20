@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -57,6 +58,8 @@ public class App {
        //runMaps();
        runEjercicios();
        runEjercicios2();
+       runEjercicio3();
+       runEjercicio4();
         
     }
 
@@ -81,6 +84,46 @@ public class App {
         
 
     }
+
+    private static void runEjercicio3(){ 
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<String[]> entradas = List.of(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
+            
+
+        List<String> resultadoEj3 = ejercicios.ranking(entradas);
+        System.out.println(resultadoEj3);
+        System.out.println("----------------------");
+        
+
+    }
+
+    private static void runEjercicio4(){ 
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        Map<String, Integer> datos = new HashMap<>();
+            datos.put("Computacion-Ana", 85);
+            datos.put("Computacion-Luis", 92);
+            datos.put("Electronica-Carlos", 78);
+            datos.put("Electronica-Maria", 88);
+            datos.put("Computacion-Pedro", 90);
+            datos.put("Mecanica-Juan", 80);
+            datos.put("Mecanica-Sofia", 95);
+
+        ejercicios.maximoPorCarrera(datos);
+    
+        
+        
+    }
+
+
 
     private static void runMaquina(){
         List<Maquina> maquinas = crearMaquinas();

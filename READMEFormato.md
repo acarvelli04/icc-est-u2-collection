@@ -18,12 +18,12 @@ Realizamos diferentes ejercicios para realizar y probar las caracteristicas de l
 ![alt text](src/assects/captura-1-2.png)
 
 ### Captura 2 
-Inserta aquí una segunda captura si aplica.
-- Archivo: `assets/captura-2.png`
+![alt text](src/assects/captura-2-2.png)
+![alt text](src/assects/captura-2-1.png)
 
 ### Captura 3 
-Inserta aquí una segunda captura si aplica.
-- Archivo: `assets/captura-2.png`
+
+![alt text](src/assects/captura-3-1.png)
 
 ### Captura 4 
 Inserta aquí una segunda captura si aplica.
